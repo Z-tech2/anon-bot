@@ -1,8 +1,9 @@
 import disnake
+from os import environ
 from disnake.ext import commands
 
 bot = commands.InteractionBot()
-token = "PUT BOT TOKEN HERE"
+token = environ["token"]
 
 @bot.slash_command(description="Sends messages anonymously")
 async def send(inter, message):
